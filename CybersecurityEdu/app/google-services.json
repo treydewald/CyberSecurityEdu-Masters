@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "146291628595",
+    "project_id": "cybersecurity-education",
+    "storage_bucket": "cybersecurity-education.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:146291628595:android:25a4297f63d251f5646146",
+        "android_client_info": {
+          "package_name": "com.example.cybersecurityeducation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "146291628595-4cagatrdb0vhtus0f9bs77alaph7qujj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cybersecurityeducation",
+            "certificate_hash": "cea7797a6fa63a4bab48dffed20849ad787b4c44"
+          }
+        },
+        {
+          "client_id": "146291628595-lqj1npqr1a5i0lghjpejd4b9d0dedvp7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATIfoQA4-T0jh8muXogkku_Ym6vRZXGY0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "146291628595-lqj1npqr1a5i0lghjpejd4b9d0dedvp7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

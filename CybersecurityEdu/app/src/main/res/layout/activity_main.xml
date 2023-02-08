@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greyBack"
+    tools:context=".MainActivity">
+
+
+    <View
+        android:id="@+id/viewMainBanner"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_wave5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_logOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_clear_border"
+        android:drawableStart="@drawable/ic_arrow_back_36"
+        android:onClick="logout"
+        android:text="@string/logout_btn"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_logo2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/app_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_vpn_lock_24_white"
+        tools:layout_editor_absoluteX="331dp"
+        tools:layout_editor_absoluteY="10dp" />
+
+    <!-- Main Linear Layout  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="65dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_logOut"
+        app:layout_constraintVertical_bias="0.0">
+
+        <!-- Dashboard Cardview  start -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_dashBoard"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:text="Dashboard" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/button_bg"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="Tips &amp; Recommendations"
+                    android:onClick="toTipsActivity"
+                    app:drawableEndCompat="@drawable/ic_bulb" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:padding="5dp"
+                    android:background="@drawable/button_bg"
+                    android:onClick="toSecuritySurvey"
+                    android:layout_marginStart="10dp"
+                    android:text="Security Survey" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:padding="7dp"
+                    android:background="@drawable/button_bg"
+                    android:onClick="toTensorFlow"
+                    android:layout_marginStart="10dp"
+                    android:text="TensorFlow Results" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <!-- Dashboard Cardview  end -->
+
+        <!-- Scroll view start -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fillViewport="true">
+            <!-- Scroll view Linear layout vertical start -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- Scroll view Linear layout horizontal row 1 start -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- row 2 column 1 start -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="10dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressBar2FA"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:indeterminateOnly="false"
+                            android:progressDrawable="@drawable/circle_progress"
+                            tools:progress="5"
+                            android:layout_marginTop="35dp"
+                            android:layout_marginStart="160dp"
+                            android:translationZ="1dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/progressBar2FA_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5%"
+                            android:layout_marginTop="80dp"
+                            android:layout_marginStart="210dp"
+                            android:translationZ="1dp"
+                             />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_2faTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Two Factor Authentication (2FA)"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/tv_2fa_video"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/button_bg"
+                                android:drawableEnd="@drawable/ic_youtubev2"
+                                android:drawablePadding="5dp"
+                                android:gravity="center_vertical"
+                                android:onClick="toYTActivity2FA"
+                                android:paddingStart="10dp"
+                                android:paddingTop="2dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="2dp"
+                                android:text="Video Module"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/button_bg"
+                                android:drawableEnd="@drawable/ic_quiz"
+                                android:drawablePadding="5dp"
+                                android:gravity="center_vertical"
+                                android:onClick="toQuizActivity2FA"
+                                android:paddingStart="10dp"
+                                android:paddingTop="3dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="3dp"
+                                android:text="Quiz"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:background="@drawable/button_bg"
+                                android:drawableEnd="@drawable/ic_article_icon_9"
+                                android:drawablePadding="5dp"
+                                android:gravity="center_vertical"
+                                android:onClick="toArticleActivity2FA"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:text="Article"
+                                android:textSize="15sp" />
+
+
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <!-- row 2 column 1 end -->
+
+                </LinearLayout>
+                <!-- Scroll view Linear layout horizontal row 1 end -->
+
+                <!-- Scroll view Linear layout horizontal row 2 start -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- row 2 column 1 start -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="10dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressBarPhish"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:indeterminateOnly="false"
+                            android:progressDrawable="@drawable/circle_progress"
+                            tools:progress="5"
+                            android:layout_marginTop="35dp"
+                            android:layout_marginStart="160dp"
+                            android:translationZ="1dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/progressBarPhish_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5%"
+                            android:layout_marginTop="80dp"
+                            android:layout_marginStart="210dp"
+                            android:translationZ="1dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:background="@color/white">
+                            <TextView
+                                android:id="@+id/tv_phishingTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Phishing Detection"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/tv_phishing_video"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="Video Module"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/button_bg"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:drawableEnd="@drawable/ic_youtubev2"
+                                android:drawablePadding="5dp"
+                                android:onClick="toYTActivityPhishing"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="Quiz"
+                                android:gravity="center_vertical"
+                                android:onClick="toQuizActivityPhishing"
+                                android:background="@drawable/button_bg"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:drawableEnd="@drawable/ic_quiz"
+                                android:drawablePadding="5dp"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:layout_marginStart="10dp"
+                                android:text="Article"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/button_bg"
+                                android:paddingStart="10dp"
+                                android:onClick="toArticleActivityPHISHING"
+                                android:paddingEnd="10dp"
+                                android:drawableEnd="@drawable/ic_article_icon_9"
+                                android:drawablePadding="5dp"
+                                />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <!-- row 2 column 1 end -->
+
+                </LinearLayout>
+                <!-- Scroll view Linear layout horizontal row 2 end -->
+
+                <!-- Scroll view Linear layout horizontal row 3 start -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- row 3 column 1 start -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="10dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressBarPass"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:indeterminateOnly="false"
+                            android:progressDrawable="@drawable/circle_progress"
+                            tools:progress="5"
+                            android:layout_marginTop="35dp"
+                            android:layout_marginStart="160dp"
+                            android:translationZ="1dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/progressBarPass_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5%"
+                            android:layout_marginTop="80dp"
+                            android:layout_marginStart="210dp"
+                            android:translationZ="1dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_passwordTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="Password Managers"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/tv_password_video"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="Video Module"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/button_bg"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:drawableEnd="@drawable/ic_youtubev2"
+                                android:drawablePadding="5dp"
+                                android:onClick="toYTActivityPasswordManagers"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="Quiz"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/button_bg"
+                                android:paddingTop="3dp"
+                                android:onClick="toQuizActivityPasswordManagers"
+                                android:paddingBottom="3dp"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:drawableEnd="@drawable/ic_quiz"
+                                android:drawablePadding="5dp"
+
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:layout_marginStart="10dp"
+                                android:text="Article"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/button_bg"
+                                android:onClick="toArticleActivityPASSWORDMANAGERS"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:drawableEnd="@drawable/ic_article_icon_9"
+                                android:drawablePadding="5dp"
+                                />
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <!-- row 3 column 1 end -->
+
+                </LinearLayout>
+                <!-- Scroll view Linear layout horizontal row 3 end -->
+
+
+                <!-- Scroll view Linear layout horizontal row 5 start -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- row 4 column 1 start -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="10dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressBarSoft"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:indeterminateOnly="false"
+                            android:progressDrawable="@drawable/circle_progress"
+                            tools:progress="5"
+                            android:layout_marginTop="35dp"
+                            android:layout_marginStart="160dp"
+                            android:translationZ="1dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/progressBarSoft_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5%"
+                            android:layout_marginTop="80dp"
+                            android:layout_marginStart="210dp"
+                            android:translationZ="1dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:background="@color/white">
+
+                            <TextView
+                                android:id="@+id/tv_updatesTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:gravity="center"
+                                android:text="SoftwareUpdates"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/tv_software_video"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="Video Module"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/button_bg"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:drawableEnd="@drawable/ic_youtubev2"
+                                android:drawablePadding="5dp"
+                                android:onClick="toYTActivitySoftwareUpdates"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="Quiz"
+                                android:gravity="center_vertical"
+                                android:onClick="toQuizActivitySoftwareUpdates"
+                                android:background="@drawable/button_bg"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:drawableEnd="@drawable/ic_quiz"
+                                android:drawablePadding="5dp"
+
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:layout_marginStart="10dp"
+                                android:text="Article"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/button_bg"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:onClick="toArticleActivitySOFTWAREUPDATES"
+                                android:drawableEnd="@drawable/ic_article_icon_9"
+                                android:drawablePadding="5dp"
+                                />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <!-- row 4 column 1 end -->
+
+
+                </LinearLayout>
+                <!-- Scroll view Linear layout horizontal row 5 end -->
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:text="Profile"
+                                android:textSize="20sp" />
+
+
+                            <ImageButton
+                                android:id="@+id/iv_settings"
+                                android:layout_width="match_parent"
+                                android:layout_height="110dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@color/white"
+                                app:srcCompat="@drawable/ic_baseline_settings_24" />
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+                </LinearLayout>
+                <!-- Scroll view Linear layout horizontal row 7 end -->
+
+            </LinearLayout>
+            <!-- Scroll view Linear layout vertical end -->
+
+        </androidx.core.widget.NestedScrollView>
+        <!-- Scroll end -->
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

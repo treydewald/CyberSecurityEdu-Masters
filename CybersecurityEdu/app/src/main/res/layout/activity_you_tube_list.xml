@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".YouTubeList">
+
+    <Button
+        android:id="@+id/btn_to_youtube_1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/round_white_border"
+        android:textAllCaps="false"
+        android:onClick="toYouTubeTemplate"
+        android:text="YouTube Video 1" />
+    <Button
+        android:id="@+id/btn_to_youtube_2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/round_white_border"
+        android:textAllCaps="false"
+        android:onClick="toYouTubeTemplate"
+        android:text="YouTube Video 2"
+        app:layout_constraintTop_toBottomOf="@id/btn_to_youtube_1"/>
+    <Button
+        android:id="@+id/btn_to_youtube_3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/round_white_border"
+        android:textAllCaps="false"
+        android:onClick="toYouTubeTemplate"
+        android:text="YouTube Video 3"
+        app:layout_constraintTop_toBottomOf="@id/btn_to_youtube_2"/>
+    <Button
+        android:id="@+id/btn_to_youtube_4"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/round_white_border"
+        android:textAllCaps="false"
+        android:onClick="toYouTubeTemplate"
+        android:text="YouTube Video 4"
+        app:layout_constraintTop_toBottomOf="@id/btn_to_youtube_3"/>
+    <Button
+        android:id="@+id/btn_to_youtube_5"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/round_white_border"
+        android:textAllCaps="false"
+        android:onClick="toYouTubeTemplate"
+        android:text="YouTube Video 5"
+        app:layout_constraintTop_toBottomOf="@id/btn_to_youtube_4"/>
+    <Button
+        android:id="@+id/btn_to_youtube_6"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/round_white_border"
+        android:textAllCaps="false"
+        android:onClick="toYouTubeTemplate"
+        android:text="YouTube Video 6"
+        app:layout_constraintTop_toBottomOf="@id/btn_to_youtube_5"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
